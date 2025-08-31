@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout principal exibido após login bem-sucedido -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    tools:context=".MainActivity">
+
+    <!-- Ícone central do app -->
+    <ImageView
+        android:id="@+id/iconeCentral"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"/>
+
+
+    <!-- Ícone do usuário -->
+    <ImageView
+        android:id="@+id/iconeUsuario"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeCentral"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <!-- Nome do usuário logado -->
+    <TextView
+        android:id="@+id/textNomeUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeCentral"
+        app:layout_constraintStart_toEndOf="@id/iconeUsuario" />
+
+    <!-- Ícone de e-mail -->
+    <ImageView
+        android:id="@+id/iconeEmail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_emailwhite"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeUsuario"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- E-mail do usuário logado -->
+    <TextView
+        android:id="@+id/textEmailUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textNomeUsuario"
+        app:layout_constraintStart_toEndOf="@id/iconeEmail" />
+
+    <!-- Botão para logout e retorno à tela de login -->
+    <Button
+        android:id="@+id/bt_deslogar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deslogar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/verde1"
+        android:padding="20dp"
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textEmailUsuario"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
